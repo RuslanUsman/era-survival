@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/era-survival/static/css/main.d768960a.css",
-    "main.js": "/era-survival/static/js/main.7f4cd7fc.js",
+    "main.css": "/era-survival/static/css/main.3e6a5fdb.css",
+    "main.js": "/era-survival/static/js/main.24971eea.js",
     "index.html": "/era-survival/index.html",
-    "main.d768960a.css.map": "/era-survival/static/css/main.d768960a.css.map",
-    "main.7f4cd7fc.js.map": "/era-survival/static/js/main.7f4cd7fc.js.map"
+    "main.3e6a5fdb.css.map": "/era-survival/static/css/main.3e6a5fdb.css.map",
+    "main.24971eea.js.map": "/era-survival/static/js/main.24971eea.js.map"
   },
   "entrypoints": [
-    "static/css/main.d768960a.css",
-    "static/js/main.7f4cd7fc.js"
+    "static/css/main.3e6a5fdb.css",
+    "static/js/main.24971eea.js"
   ]
 }
