@@ -1,0 +1,157 @@
+/* Основной контейнер страницы корзины */
+.cart-page {
+  padding: 20px;
+  background-color: #222; /* Тёмный фон */
+  color: #fff; /* Светлый текст */
+  min-height: 100vh; /* Минимальная высота страницы */
+  overflow-x: hidden; /* Предотвращаем горизонтальный скроллинг */
+  text-align: center;
+}
+
+/* Заголовок страницы */
+.cart-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f4a444; /* Цвет заголовка */
+}
+
+/* Сетка товаров */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивная сетка */
+  gap: 15px; /* Расстояние между карточками */
+  justify-content: center; /* Центрируем карточки */
+  width: 100%;
+  max-width: 1200px; /* Ограничиваем максимальную ширину */
+}
+
+/* Карточка товара */
+.cart-item {
+  background-color: #333; /* Тёмный фон карточки */
+  border: 2px solid #f4a444; /* Рамка карточки */
+  border-radius: 10px; /* Скруглённые углы */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+}
+
+/* Изображение товара */
+.cart-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Детали товара */
+.item-details {
+  text-align: left; /* Выравнивание текста по левому краю */
+  margin-top: 10px;
+}
+
+/* Текст деталей товара */
+.item-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.item-details p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Кнопка удаления товара */
+.remove-button {
+  background-color: #f44336;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #d32f2f; /* Цвет при наведении */
+}
+
+/* Общая стоимость */
+.total-price {
+  font-size: 20px;
+  margin: 20px 0;
+  color: #f4a444;
+}
+
+/* Поле ввода ID аккаунта */
+.order-section input {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 300px;
+  border: 2px solid #f4a444;
+  border-radius: 5px;
+}
+
+/* Кнопка оформления заказа */
+.order-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #45a049;
+}
+
+/* Сообщения об ошибке и успехе */
+.error-message,
+.success-message {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Две колонки на маленьких экранах */
+  }
+
+  .cart-item {
+      padding: 10px; /* Уменьшаем отступы */
+  }
+
+  .item-details h2 {
+      font-size: 16px; /* Уменьшаем размер заголовка */
+  }
+
+  .item-details p {
+      font-size: 12px; /* Уменьшаем текст описания */
+  }
+
+  .remove-button {
+      padding: 4px 8px; /* Уменьшаем размер кнопок */
+  }
+
+  .order-section input {
+      width: 100%; /* Растягиваем поле ввода */
+      font-size: 14px;
+  }
+
+  .order-button {
+      padding: 8px 12px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Две колонки даже на узких экранах */
+  }
+}

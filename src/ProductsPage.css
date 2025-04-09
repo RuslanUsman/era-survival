@@ -1,0 +1,213 @@
+/* Основной контейнер страницы товаров */
+.products-page {
+  padding: 20px;
+  background-color: #222; /* Тёмный фон */
+  color: #fff; /* Светлый текст */
+  min-height: 100vh; /* Минимальная высота страницы */
+  overflow-x: hidden; /* Предотвращаем горизонтальный скроллинг */
+  text-align: center;
+}
+
+/* Заголовок страницы */
+.products-page h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f4a444; /* Цвет заголовка */
+}
+
+/* Сетка карточек товаров */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивная сетка с минимальной шириной 150px */
+  gap: 15px; /* Расстояние между карточками */
+  justify-content: center; /* Центрируем карточки */
+  width: 100%; /* Растягиваем сетку до полной ширины */
+  max-width: 1200px; /* Ограничиваем максимальную ширину */
+}
+
+/* Карточка товара */
+.product-item {
+  background-color: #333; /* Тёмный фон карточки */
+  border: 2px solid #f4a444; /* Рамка карточки */
+  border-radius: 10px; /* Скруглённые углы */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+  cursor: pointer;
+}
+
+/* Изображение товара */
+.product-item img {
+  max-width: 90%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Заголовок товара */
+.product-item h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Описание товара */
+.product-item p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 10px 0;
+  color: #ddd;
+}
+
+/* Панель действий */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Расстояние между кнопками */
+}
+
+/* Кнопки действий */
+.actions button {
+  background-color: #f4a444; /* Цвет кнопки */
+  border: none;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #e0943e; /* Цвет при наведении */
+}
+
+/* Текст между кнопками (+ и -) */
+.actions span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Две колонки для узких экранов */
+  }
+
+  .product-item {
+      padding: 10px; /* Уменьшаем отступы */
+  }
+
+  .product-item h2 {
+      font-size: 16px; /* Уменьшаем заголовок */
+  }
+
+  .product-item p {
+      font-size: 12px; /* Уменьшаем текст описания */
+  }
+
+  .actions button {
+      font-size: 12px; /* Уменьшаем размер кнопок */
+      padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Две колонки даже на узких экранах */
+  }
+
+  .product-item {
+      padding: 10px; /* Ещё меньше отступы для компактности */
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Увеличиваем карточки для больших экранов */
+    gap: 20px; /* Увеличиваем расстояние между карточками */
+  }
+
+  .product-item {
+    padding: 20px; /* Увеличиваем внутренние отступы */
+    font-size: 18px; /* Увеличиваем текст */
+  }
+
+  .actions button {
+    padding: 6px 12px; /* Увеличиваем кнопки для крупных экранов */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Настройка для средних экранов */
+  }
+
+  .product-item {
+    padding: 15px; /* Средний размер карточек */
+    font-size: 16px; /* Средний текст */
+  }
+
+  .actions button {
+    padding: 5px 10px; /* Уменьшаем кнопки */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки для маленьких экранов */
+    gap: 15px;
+  }
+
+  .product-item {
+    padding: 10px; /* Компактные карточки */
+    font-size: 14px; /* Уменьшенный текст */
+  }
+
+  .actions button {
+    padding: 4px 8px; /* Уменьшаем размер кнопок */
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* Одна колонка для узких экранов */
+    gap: 10px;
+  }
+
+  .product-item {
+    padding: 8px; /* Минимальные внутренние отступы */
+    font-size: 12px; /* Компактный текст */
+  }
+
+  .product-item h2 {
+    font-size: 14px; /* Уменьшение заголовка карточек */
+  }
+
+  .product-item p {
+    font-size: 10px; /* Компактное описание карточек */
+  }
+
+  .actions button {
+    padding: 4px 6px; /* Ещё меньшие кнопки */
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,146 @@
+/* Основной контейнер главного меню */
+.main-menu-container {
+  padding: 20px;
+  background-color: #222; /* Тёмный фон */
+  color: #fff; /* Светлый текст */
+  min-height: 100vh; /* Минимальная высота страницы */
+  overflow-x: hidden; /* Предотвращаем горизонтальный скроллинг */
+}
+
+/* Заголовок страницы */
+.main-menu-container h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #f4a444;
+  text-align: center; /* Заголовок центрирован */
+}
+
+/* Сетка карточек меню */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивная сетка */
+  gap: 15px; /* Расстояние между карточками */
+  justify-content: center; /* Центрируем карточки по горизонтали */
+}
+
+/* Карточки меню */
+.menu-item {
+  background-color: #333; /* Тёмный фон карточки */
+  border: 2px solid #f4a444;
+  border-radius: 10px; /* Скруглённые углы */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Лёгкая тень */
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Эффект при наведении */
+.menu-item:hover {
+  background-color: #f4a444; /* Изменение цвета при наведении */
+  color: #000; /* Контрастный текст */
+  transform: scale(1.05); /* Лёгкое увеличение */
+}
+
+/* Заголовок карточки */
+.menu-item h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Текст описания карточки */
+.menu-item p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ddd;
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Две колонки для маленьких экранов */
+  }
+
+  .menu-item {
+      padding: 10px; /* Уменьшаем отступы внутри карточек */
+  }
+
+  .menu-item h2 {
+      font-size: 16px; /* Уменьшаем размер заголовка */
+  }
+
+  .menu-item p {
+      font-size: 12px; /* Уменьшаем текст описания */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+      grid-template-columns: repeat(2, 1fr); /* Две колонки даже для узких экранов */
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Увеличиваем размер карточек для больших экранов */
+    gap: 20px; /* Увеличиваем расстояние между карточками */
+  }
+
+  .menu-item {
+    padding: 20px; /* Увеличиваем внутренние отступы */
+    font-size: 18px; /* Увеличиваем размер текста */
+  }
+}
+
+@media (max-width: 992px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Для средних экранов */
+  }
+
+  .menu-item {
+    padding: 15px; /* Оставляем средний размер карточек */
+    font-size: 16px; /* Средний текст */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Две колонки для маленьких экранов */
+    gap: 15px;
+  }
+
+  .menu-item {
+    padding: 10px; /* Компактные карточки */
+    font-size: 14px; /* Уменьшенный текст */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* Одна колонка для узких экранов */
+    gap: 10px;
+  }
+
+  .menu-item {
+    padding: 8px; /* Минимальные внутренние отступы */
+    font-size: 12px; /* Компактный текст для маленьких экранов */
+  }
+
+  .menu-item h2 {
+    font-size: 14px; /* Уменьшаем заголовок карточек */
+  }
+
+  .menu-item p {
+    font-size: 10px; /* Уменьшаем описание карточек */
+  }
+}
